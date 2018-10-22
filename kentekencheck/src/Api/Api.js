@@ -26,7 +26,8 @@ class Api extends Component {
       gemiddeld_verbruik: "",
       brandstofverbruik_buiten: "",
       brandstofverbruik_stad: "",
-      valdationMessage: ""
+      valdationMessage: "",
+      submitted: false
     };
   }
 
@@ -35,8 +36,12 @@ class Api extends Component {
   }
 
   handleSubmit = event => {
+    this.setState({ submitted: true });
     this.setState({ validationMessage: "" });
-    if (this.state.kenteken.length > 8 || this.state.kenteken.length == 0) {
+    if (
+      this.state.kenteken.length > 8 ||
+      (this.state.kenteken.length === 0 && this.state.submitted)
+    ) {
       this.setState({ validationMessage: "Ingevoerde kenteken ongeldig." });
     }
     axios
@@ -81,7 +86,8 @@ class Api extends Component {
           aantal_deuren: response.data[0].aantal_deuren + " deurs",
           type: response.data[0].type,
           wam_verzekerd: response.data[0].wam_verzekerd,
-          datum_eerste_toelating: response.data[0].datum_eerste_toelating
+          datum_eerste_toelating: response.data[0].datum_eerste_toelating,
+          submitted: false
         });
         console.log(this.state.merk + this.state.model);
       })

@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import classes from "./Kenteken.css";
 
 class Kenteken extends Component {
   // Adds a class constructor that assigns the initial state values:
