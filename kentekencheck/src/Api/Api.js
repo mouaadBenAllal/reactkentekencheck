@@ -59,7 +59,6 @@ class Api extends Component {
           brandstofverbruik_stad:
             response.data[0].brandstofverbruik_stad + " l/100"
         });
-        console.log();
       })
       // Catch any error here
       .catch(error => {
@@ -72,7 +71,6 @@ class Api extends Component {
           this.state.kenteken
       )
       .then(response => {
-        console.log(response.data);
         this.setState({
           merk: response.data[0].merk,
           model: response.data[0].handelsbenaming,
@@ -89,7 +87,6 @@ class Api extends Component {
           datum_eerste_toelating: response.data[0].datum_eerste_toelating,
           submitted: false
         });
-        console.log(this.state.merk + this.state.model);
       })
       // Catch any error here
       .catch(error => {
@@ -99,7 +96,6 @@ class Api extends Component {
 
   // The render method contains the JSX code which will be compiled to HTML.
   render() {
-    console.log(React.version);
     return (
       <section className="hero is-info">
         <div className="hero-body">
