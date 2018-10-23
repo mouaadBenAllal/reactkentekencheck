@@ -45,10 +45,7 @@ class Api extends Component {
       this.setState({ validationMessage: "Ingevoerde kenteken ongeldig." });
     }
     axios
-      .get(
-        "https://opendata.rdw.nl/resource/8ys7-d773.json?kenteken=" +
-          this.state.kenteken
-      )
+      .get("8ys7-d773.json?kenteken=" + this.state.kenteken)
       .then(response => {
         this.setState({
           brandstof: response.data[0].brandstof_omschrijving,
@@ -66,10 +63,7 @@ class Api extends Component {
       });
 
     axios
-      .get(
-        "https://opendata.rdw.nl/resource/m9d7-ebf2.json?kenteken=" +
-          this.state.kenteken
-      )
+      .get("m9d7-ebf2.json?kenteken=" + this.state.kenteken)
       .then(response => {
         this.setState({
           merk: response.data[0].merk,
@@ -106,12 +100,22 @@ class Api extends Component {
                   <div className="control has-icons-left has-icons-right">
                     <input
                       className="input is-large"
+                      style={{
+                        backgroundColor: "#e7ab00",
+                        borderRadius: "0px",
+                        fontSize: "28px",
+                        textAlign: "center",
+                        textTransform: "uppercase",
+                        fontWeight: "bold"
+                      }}
                       type="search"
                       placeholder=""
                       name="search"
                       onChange={event =>
                         this.setState({
-                          kenteken: event.target.value.toUpperCase()
+                          kenteken: event.target.value
+                            .toUpperCase()
+                            .replace(/-/g, "")
                         })
                       }
                     />

@@ -5,6 +5,8 @@ import App from "./App";
 import registerServiceWorker from "./registerServiceWorker";
 import axios from "axios";
 
+axios.defaults.baseURL = "https://opendata.rdw.nl/resource/"
+
 axios.interceptors.request.use(
   response => {
     return response;
