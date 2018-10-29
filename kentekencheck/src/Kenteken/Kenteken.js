@@ -50,7 +50,7 @@ class Kenteken extends Component {
               </div>
               <div className="tile is-parent">
                 <article className="tile is-child notification is-danger">
-                  <p className="title">Verbruik</p>
+                  <p className="title">Brandstof</p>
                   <p className="subtitle">{this.props.brandstof}</p>
                   <hr />
                   <p className="title">Verbruik gemiddeld</p>
@@ -72,7 +72,7 @@ class Kenteken extends Component {
             </div>
             <div className="tile is-parent">
               <article
-                style={{ height: "440px", width: "200px" }}
+                style={{ height: "620px", width: "200px" }}
                 className="tile is-child notification is-success"
               >
                 <div className="content">

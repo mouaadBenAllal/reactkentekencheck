@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import axios from "axios";
 import Kenteken from "./../Kenteken/Kenteken";
-import "./Api.css";
+import "./Api.modules.css";
 
 class Api extends Component {
   // Adds a class constructor that assigns the initial state values:

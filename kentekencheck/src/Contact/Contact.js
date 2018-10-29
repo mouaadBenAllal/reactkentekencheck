@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import img from "./../Static/kentekenicon.png";
-import Form from "./../Form";
+import Form from "./Form/Form";
 import { Link } from "react-router-dom";
 
 class Contact extends Component {
@@ -12,7 +12,7 @@ class Contact extends Component {
             <div className="navbar-brand">
               <Link
                 to={{
-                  pathname: "/home",
+                  pathname: "/",
                   hash: "#home"
                 }}
                 className="navbar-item"
@@ -34,9 +34,15 @@ class Contact extends Component {
                 <div className="navbar-item has-dropdown is-hoverable">
                   <a className="navbar-link">Account</a>
                   <div className="navbar-dropdown">
-                    <a className="navbar-item" href="/contact">
+                    <Link
+                      to={{
+                        pathname: "/contact",
+                        hash: "#contact"
+                      }}
+                      className="navbar-item"
+                    >
                       Contact
-                    </a>
+                    </Link>
                     <a className="navbar-item">Profile</a>
                     <a className="navbar-item">Settings</a>
                     <hr className="navbar-divider" />

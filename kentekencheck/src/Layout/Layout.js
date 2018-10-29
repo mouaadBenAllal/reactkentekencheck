@@ -1,8 +1,7 @@
 import React, { Component } from "react";
 import img from "./../Static/kentekenicon.png";
-import { Route, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import Api from "./../Api/Api";
-import Contact from "./../Contact/Contact";
 
 class Layout extends Component {
   // The render method contains the JSX code which will be compiled to HTML.
@@ -14,7 +13,7 @@ class Layout extends Component {
             <div className="navbar-brand">
               <Link
                 to={{
-                  pathname: "/home",
+                  pathname: "/",
                   hash: "#home"
                 }}
                 className="navbar-item"
