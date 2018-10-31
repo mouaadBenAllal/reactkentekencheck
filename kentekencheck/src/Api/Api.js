@@ -3,6 +3,9 @@ import axios from "axios";
 import Kenteken from "./../Kenteken/Kenteken";
 import "./Api.modules.css";
 
+/**
+ * Api component that calls the api and passes data to Kenteken component.
+ */
 class Api extends Component {
   // Adds a class constructor that assigns the initial state values:
   constructor() {
@@ -35,15 +38,20 @@ class Api extends Component {
     this.handleSubmit(event);
   }
 
+  /* handleSubmit method gets called when clicked on "search" button.
+  * @param {syntethicEvent} event 
+  */
   handleSubmit = event => {
     this.setState({ submitted: true });
     this.setState({ validationMessage: "" });
+    // Validates input of "search" inputfield.
     if (
       this.state.kenteken.length > 8 ||
       (this.state.kenteken.length === 0 && this.state.submitted)
     ) {
       this.setState({ validationMessage: "Ingevoerde kenteken ongeldig." });
     }
+    // gets data from api url and sets state.
     axios
       .get("8ys7-d773.json?kenteken=" + this.state.kenteken)
       .then(response => {
@@ -61,7 +69,7 @@ class Api extends Component {
       .catch(error => {
         console.log(error);
       });
-
+    // gets data from api url and sets state.
     axios
       .get("m9d7-ebf2.json?kenteken=" + this.state.kenteken)
       .then(response => {
@@ -88,7 +96,10 @@ class Api extends Component {
       });
   };
 
-  // The render method contains the JSX code which will be compiled to HTML.
+  /** The render method contains the JSX code which will be compiled to HTML.
+   *  Also passes api-data to Kenteken component.
+   */
+
   render() {
     return (
       <section className="hero is-info">
@@ -140,6 +151,7 @@ class Api extends Component {
             </div>
           </div>
         </div>
+
         <Kenteken
           merk={this.state.merk}
           model={this.state.model}
@@ -166,4 +178,5 @@ class Api extends Component {
   }
 }
 
+/* Exports App to be used as a module inside the application.*/
 export default Api;
