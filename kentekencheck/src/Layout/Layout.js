@@ -86,7 +86,6 @@ class Layout extends Component {
                     </span>
                   </div>
                 </div>
-                Mouaad Ben Allal 2018
                 <div className="control">
                   <div className="tags has-addons">
                     <a

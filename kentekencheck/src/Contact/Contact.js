@@ -6,6 +6,8 @@ import img from "./../Static/kentekenicon.png";
 import Form from "./Form/Form";
 // import Link to be used below
 import { Link } from "react-router-dom";
+// import css from contact.css
+import "./Contact.modules.css";
 
 /**
  * Contact component that loads the Form component.
@@ -61,6 +63,7 @@ class Contact extends Component {
           </div>
         </nav>
         <Form />
+        <div className="Fix" />
         <footer>
           <div className="box cta">
             <div className="columns is-mobile is-centered">
