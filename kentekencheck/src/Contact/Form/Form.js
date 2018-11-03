@@ -2,7 +2,7 @@
 import React, { Component } from "react";
 
 /**
- * Form component that calls the Opendata-api and passes data to Kenteken component.
+ * Form component showing contact form.
  */
 class Form extends Component {
   // The render method contains the JSX code which will be compiled to HTML.
