@@ -69,20 +69,26 @@ class Contact extends Component {
                   <div className="tags has-addons">
                     <a
                       className="tag is-link"
-                      href="https://linkedin.com/mouaadbenallal"
+                      href={"//www.linkedin.com/in/mouaad-ben-allal"}
+                      target="_blank"
                     >
                       LinkedIn
                     </a>
                     <span className="tag is-light">
-                      Mouaad Ben Allal <i className="fa fa-linkedin" />
+                      <i className="fa fa-linkedin" />
                     </span>
                   </div>
                 </div>
                 <div className="control">
                   <div className="tags has-addons">
-                    <a className="tag is-link">Github</a>
+                    <a
+                      className="tag is-link"
+                      href={"//github.com/mouaadBenAllal"}
+                      target="_blank"
+                    >
+                      Github
+                    </a>
                     <span className="tag is-light">
-                      Mouaad Ben Allal
                       <i className="fa fa-github" />
                     </span>
                   </div>
