@@ -1,8 +1,15 @@
+// import React and Component
 import React, { Component } from "react";
+// import kenteken icon
 import img from "./../Static/kentekenicon.png";
+// import Link  for routing, to be used below
 import { Link } from "react-router-dom";
+// import api component
 import Api from "./../Api/Api";
 
+/**
+ * Layout component that acts as a container where Api component lives.
+ */
 class Layout extends Component {
   // The render method contains the JSX code which will be compiled to HTML.
   render() {
@@ -56,6 +63,7 @@ class Layout extends Component {
             </div>
           </div>
         </nav>
+
         <Api />
 
         <br />
@@ -90,10 +98,10 @@ class Layout extends Component {
             </div>
           </div>
         </footer>
-        <script src="../js/bulma.js" />
       </div>
     );
   }
 }
 
+/* Exports Layout component to be used as a module inside the application.*/
 export default Layout;

@@ -1,11 +1,13 @@
+// import React and Component to be used below
 import React, { Component } from "react";
 
+/**
+ * Kenteken component that receives data from Api through props.
+ */
 class Kenteken extends Component {
-  // Adds a class constructor that assigns the initial state values:
-
-  // This is called when an instance of a component is being created and inserted into the DOM.
-
-  // The render method contains the JSX code which will be compiled to HTML.
+  /** The render method contains the JSX code which will be compiled to HTML.
+   *  Also displays data in the right place in the DOM.
+   */
   render() {
     return (
       <div className="columns is-mobile is-centered">
@@ -93,4 +95,5 @@ class Kenteken extends Component {
   }
 }
 
+/* Exports Kenteken component to be used as a module inside the application.*/
 export default Kenteken;

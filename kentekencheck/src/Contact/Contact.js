@@ -1,8 +1,15 @@
+// import React and Component
 import React, { Component } from "react";
+// import kenteken icon image
 import img from "./../Static/kentekenicon.png";
+// import Form component to be used below
 import Form from "./Form/Form";
+// import Link to be used below
 import { Link } from "react-router-dom";
 
+/**
+ * Contact component that loads the Form component.
+ */
 class Contact extends Component {
   render() {
     return (
@@ -84,10 +91,10 @@ class Contact extends Component {
             </div>
           </div>
         </footer>
-        <script src="../js/bulma.js" />
       </div>
     );
   }
 }
 
+/* Exports Contact component to be used as a module inside the application.*/
 export default Contact;

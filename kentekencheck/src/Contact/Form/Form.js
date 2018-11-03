@@ -1,6 +1,11 @@
+// import React and Component to be used below
 import React, { Component } from "react";
 
+/**
+ * Form component that calls the Opendata-api and passes data to Kenteken component.
+ */
 class Form extends Component {
+  // The render method contains the JSX code which will be compiled to HTML.
   render() {
     return (
       <section className="hero is-info">
@@ -11,8 +16,8 @@ class Form extends Component {
                 <h1 style={{ fontSize: "35px" }}>Contact us!</h1>
                 <br />
                 <div className="content">
-                  <div class="field">
-                    <div class="control">
+                  <div className="field">
+                    <div className="control">
                       <input
                         className="input is-primary"
                         type="Email"
@@ -23,8 +28,8 @@ class Form extends Component {
                   </div>
 
                   <br />
-                  <div class="field">
-                    <div class="control">
+                  <div className="field">
+                    <div className="control">
                       <input
                         className="input is-primary"
                         type="Text"
@@ -35,10 +40,10 @@ class Form extends Component {
                   </div>
                   <br />
 
-                  <div class="field">
-                    <div class="control">
+                  <div className="field">
+                    <div className="control">
                       <textarea
-                        class="textarea is-primary"
+                        className="textarea is-primary"
                         placeholder="Message"
                       />
                     </div>
@@ -57,4 +62,5 @@ class Form extends Component {
   }
 }
 
+/* Exports Api component to be used as a module inside the application.*/
 export default Form;

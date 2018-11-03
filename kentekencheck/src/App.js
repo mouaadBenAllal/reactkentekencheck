@@ -1,8 +1,14 @@
+// import React and Component
 import React, { Component } from "react";
+// import css
 import "./App.modules.css";
+// import Contact component
 import Contact from "./Contact/Contact";
+// import Layout component
 import Layout from "./Layout/Layout";
+// import BrowserRouter to be used below
 import { BrowserRouter } from "react-router-dom";
+// import Route to be used below
 import { Route } from "react-router-dom";
 
 /**

@@ -1,10 +1,14 @@
+// import React and Component to be used below
 import React, { Component } from "react";
+// import Axios to be used below
 import axios from "axios";
+// import Kenteken component to be used below
 import Kenteken from "./../Kenteken/Kenteken";
+// import css for Api component
 import "./Api.modules.css";
 
 /**
- * Api component that calls the api and passes data to Kenteken component.
+ * Api component that calls the Opendata-api and passes data to Kenteken component.
  */
 class Api extends Component {
   // Adds a class constructor that assigns the initial state values:
@@ -34,8 +38,11 @@ class Api extends Component {
     };
   }
 
-  componentDidMount(event) {
-    this.handleSubmit(event);
+  /**
+   * The componentDidMount() method runs after the component output has been rendered to the DOM.
+   */
+  componentDidMount() {
+    console.log("[API.JS] componentDidMount is called.");
   }
 
   /* handleSubmit method gets called when clicked on "search" button.
@@ -97,9 +104,8 @@ class Api extends Component {
   };
 
   /** The render method contains the JSX code which will be compiled to HTML.
-   *  Also passes api-data to Kenteken component.
+   *  Also passes api-data to Kenteken component and displaying the data.
    */
-
   render() {
     return (
       <section className="hero is-info">
@@ -178,5 +184,5 @@ class Api extends Component {
   }
 }
 
-/* Exports App to be used as a module inside the application.*/
+/* Exports Api component to be used as a module inside the application.*/
 export default Api;
